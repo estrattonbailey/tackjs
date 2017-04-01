@@ -3,10 +3,10 @@ import { tack } from 'tackjs'
 document.addEventListener('DOMContentLoaded', e => {
   window.target = document.getElementById('target')
   window.box = [
+    document.getElementById('box0'),
     document.getElementById('box1'),
     document.getElementById('box2'),
-    document.getElementById('box3'),
-    document.getElementById('box4')
+    document.getElementById('box3')
   ]
   window.tack = tack
 
@@ -24,7 +24,7 @@ use them like this:
 
 also, tack returns some utils:
 
-  const pin = tack(target, box[4], 'bottomLeft')
+  const pin = tack(target, box[3], 'bottomLeft')
 
   pin.update() // update position, like after resize
   pin.destroy() // unpin
