@@ -22,6 +22,17 @@ pin.destroy()
 pin.update()
 ```
 
+## Alignment
+Tack supports the following coordinates relative to the passed `scope` element:
+- `top`
+- `bottom`
+- `left`
+- `right`
+- `topLeft`
+- `topRight`
+- `bottomLeft`
+- `bottomRight`
+
 ## Browser Support
 TODO, but should work in all evergreen browsers and IE 10+.
 
