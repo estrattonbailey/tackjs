@@ -44,11 +44,11 @@ export const position = (target, scope, placement) => {
   const x = c.x - ((e.right.x - e.left.x) / 2)
   const y = c.y - ((e.bottom.y - e.top.y) / 2)
 
-  target.classList.add('is-tacked')
   target.style.transform = `translateX(${x}px) translateY(${y}px)`
 }
 
 export const tack = (target, scope, placement) => {
+  target.classList.add('is-tacked')
   position(target, scope, placement)
 
   return {

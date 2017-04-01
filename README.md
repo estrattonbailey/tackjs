@@ -1,10 +1,26 @@
 # tackjs
+A minimal toolkit to pin an element relative to another element.
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
 
-## Features
-
 ## Usage
+```javascript
+import { tack } from 'tackjs'
+
+const scope = document.getElementById('scope')
+const target = document.getElementById('target')
+
+const pin = tack(target, scope, 'top')
+
+// refresh position
+pin.update()
+
+// remove class and transform
+pin.destroy()
+
+// can be re-pinned!
+pin.update()
+```
 
 ## Browser Support
 TODO, but should work in all evergreen browsers and IE 10+.
