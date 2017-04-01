@@ -1,6 +1,6 @@
 {
   "name": "tackjs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple toolkit to pin an element relative to another element.",
   "main": "dist/index.js",
   "license": "MIT",
@@ -13,8 +13,7 @@
     "watch": "NODE_ENV=development babel -w --no-comments index.js -d dist/",
     "prepublish": "npm run build"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.21.0",
