@@ -1,5 +1,5 @@
 # tackjs
-A minimal toolkit to pin an element relative to another element.
+A minimal toolkit to pin an element relative to another element. [Demo here](https://estrattonbailey.github.io/tackjs/).
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
 
