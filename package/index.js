@@ -3,6 +3,8 @@ export const getCoords = element => {
   const { pageYOffset: y } = window
 
   return {
+    height: b - t,
+    width: r - l,
     top: {
       y: y + t,
       x: l + ((r - l) / 2)
@@ -41,10 +43,66 @@ export const getCoords = element => {
 export const position = (target, scope, placement) => {
   const c = getCoords(scope)[placement]
   const e = getCoords(target)
-  const x = c.x - ((e.right.x - e.left.x) / 2)
-  const y = c.y - ((e.bottom.y - e.top.y) / 2)
+  const { pageYOffset: y } = window
 
-  target.style.transform = `translateX(${x}px) translateY(${y}px)`
+  const vp = {
+    top: y,
+    bottom: y + window.innerHeight,
+    left: 0,
+    right: window.innerWidth,
+  }
+
+  const offsets = {
+    top: {
+      x: (e.width / 2),
+      y: e.height
+    },
+    bottom: {
+      x: (e.width / 2),
+      y: 0
+    },
+    left: {
+      x: e.width,
+      y: (e.height / 2)
+    },
+    right: {
+      x: 0,
+      y: (e.height / 2)
+    },
+    topLeft: {
+      x: e.width,
+      y: e.height
+    },
+    topRight: {
+      x: 0,
+      y: e.height
+    },
+    bottomLeft: {
+      x: e.width,
+      y: 0
+    },
+    bottomRight: {
+      x: 0,
+      y: 0
+    },
+  }
+
+  let posx = c.x - offsets[placement].x
+  let posy = c.y - offsets[placement].y
+
+  if (posx < vp.left) {
+    posx = vp.left
+  } else if ((posx + e.width) > vp.right) {
+    posx = vp.right - e.width
+  }
+
+  if (posy < vp.top) {
+    posy = vp.top
+  } else if ((posy + e.height) > vp.bottom) {
+    posy = vp.bottom - e.height
+  }
+
+  target.style.transform = `translateX(${posx}px) translateY(${posy}px)`
 }
 
 export const tack = (target, scope, placement) => {

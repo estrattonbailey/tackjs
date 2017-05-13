@@ -1,4 +1,4 @@
-import { tack } from 'tackjs'
+import { tack } from '../package/dist/index.js'
 
 document.addEventListener('DOMContentLoaded', e => {
   window.target = document.getElementById('target')
