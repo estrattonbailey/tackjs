@@ -49,7 +49,7 @@ export const position = (target, scope, placement) => {
     top: y,
     bottom: y + window.innerHeight,
     left: 0,
-    right: window.innerWidth,
+    right: window.innerWidth
   }
 
   const offsets = {
@@ -84,7 +84,7 @@ export const position = (target, scope, placement) => {
     bottomRight: {
       x: 0,
       y: 0
-    },
+    }
   }
 
   let posx = c.x - offsets[placement].x
