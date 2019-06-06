@@ -1,0 +1,35 @@
+{
+  "name": "tackjs",
+  "version": "1.0.0",
+  "description": "A simple toolkit to pin an element relative to another element.",
+  "source": "index.js",
+  "module": "dist/tackjs.es.js",
+  "jsnext:main": "dist/tackjs.es.js",
+  "main": "dist/tackjs.js",
+  "umd:main": "dist/tackjs.umd.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "microbundle build",
+    "watch": "microbundle watch",
+    "publish": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/estrattonbailey/tackjs.git"
+  },
+  "author": "estrattonbailey",
+  "keywords": [
+    "tack",
+    "positioning"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/estrattonbailey/tackjs/issues"
+  },
+  "homepage": "https://github.com/estrattonbailey/tackjs#readme",
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
