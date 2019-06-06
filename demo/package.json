@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "tackjs-demo",
+  "scripts": {
+    "deploy": "now --target production"
+  }
+}
