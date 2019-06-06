@@ -102,7 +102,7 @@ export const position = (target, scope, placement) => {
     posy = vp.bottom - e.height
   }
 
-  target.style.transform = `translateX(${posx}px) translateY(${posy}px)`
+  target.style.transform = `translateX(${Math.round(posx)}px) translateY(${Math.round(posy)}px)`
 }
 
 export const tack = (target, scope, placement) => {
