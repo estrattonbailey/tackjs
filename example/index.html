@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>tackjs 📌</title>
+    <meta name="description" content="A minimal toolkit to pin an element relative to another element." />
 
-  <link href="main.css" rel="stylesheet" type="text/css"/>
+    <link href="https://unpkg.com/svbstrate@4.1.0/dist/svbstrate.css" rel="stylesheet" type="text/css"/>
 
-  <script src='https://unpkg.com/tackjs@1.1.0/dist/tackjs.umd.js'></script>
+    <style>
+      .box { background: tomato; width: calc(50% - 0.5em); }
+      #target { border: 1px solid currentColor; height: 40px; width: 40px; }
+    </style>
+  </head>
+  <body>
+    <main class='f aic jcc px1' style='height: 100vh; color: #333'>
+      <div class='py1 mxa x' style='max-width: 600px'>
+        <h1 class='h2 mb025'>tackjs</h1>
+        <h4 class='pb025'>A minimal toolkit to pin an element relative to another element.</h4>
 
-  <title>tack</title>
-</head>
-<body>
+        <p>Press Cmd + Option + J to open the console and play around.</p>
 
-  <div class="outer">
-    <div class="container">
-      <h1>tackjs</h1>
-      <p>press Cmd + Option + J to open the console and play around</p>
-      <div class="flex">
-        <div class="box">
-          <div id="box0">
+        <div class="f fw jcb mt1 pt1">
+          <div id="box0" class='box p1 f aic jcc mr05 mb1'>
             <span>0</span>
           </div>
-        </div>
-        <div class="box">
-          <div id="box1">
+          <div id="box1" class='box p1 f aic jcc ml05 mb1'>
             <span>1</span>
           </div>
-        </div>
-        <div class="box">
-          <div id="box2">
+          <div id="box2" class='box p1 f aic jcc mr05'>
             <span>2</span>
           </div>
-        </div>
-        <div class="box">
-          <div id="box3">
+          <div id="box3" class='box p1 f aic jcc ml05'>
             <span>3</span>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </main>
 
-  <div id="target"></div>
+    <div id="target" class='abs top left h4 f aic jcc'>🍕</div>
 
-  <script src="index.js"></script>
-</body>
+    <script src='https://unpkg.com/tackjs@1.1.1/dist/tackjs.umd.js'></script>
+    <script src="index.js"></script>
+  </body>
 </html>

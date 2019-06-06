@@ -1,5 +1,7 @@
 # tackjs
-Hyper-minimal toolkit to pin an element relative to another element. [Demo here](https://estrattonbailey.github.io/tackjs/). **518b gzipped.**
+Tiny utility to position an element absolutely in relation to another element. **500b gzipped.**
+
+> What's this for? Think popovers, modals, tooltips, scroll-jacking, etc.
 
 ## Install
 ```bash
@@ -7,26 +9,35 @@ npm i tackjs --save
 ```
 
 ## Usage
+Usage is very straightfoward. Think, "pin *element* to *target* at the *top*":
 ```javascript
 import tack from 'tackjs'
 
-const scope = document.getElementById('scope')
-const target = document.getElementById('target')
+const element = document.querySelector('...')
+const target = document.querySelector('...')
 
-const pin = tack(target, scope, 'top')
+const pin = tack(element, target, 'top')
+```
 
-// refresh position
-pin.update()
-
-// remove class and transform
-pin.destroy()
-
-// can be re-pinned!
+To update the position – say after the window resizes – use `update`:
+```javascript
 pin.update()
 ```
 
-## Alignment
-Tack supports the following coordinates relative to the passed `scope` element:
+If you need to un-pin and remove all styles:
+```javascript
+pin.destroy()
+```
+
+But don't worry! It can be re-pinned as well:
+```javascript
+pin.update()
+```
+
+**N.B.** `tackjs` also adds an `.is-tacked` class to all pinned elements.
+
+### Alignment
+Tack supports the following coordinates relative to the passed `target` element:
 - `top`
 - `bottom`
 - `left`
