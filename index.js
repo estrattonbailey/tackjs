@@ -1,4 +1,4 @@
-export const getCoords = element => {
+function getCoords (element) {
   const { left: l, right: r, top: t, bottom: b } = element.getBoundingClientRect()
   const { pageYOffset: y } = window
 
@@ -40,7 +40,7 @@ export const getCoords = element => {
   }
 }
 
-export const position = (target, scope, placement) => {
+function position (target, scope, placement) {
   const c = getCoords(scope)[placement]
   const e = getCoords(target)
   const { pageYOffset: y } = window
@@ -105,7 +105,7 @@ export const position = (target, scope, placement) => {
   target.style.transform = `translateX(${Math.round(posx)}px) translateY(${Math.round(posy)}px)`
 }
 
-export const tack = (target, scope, placement) => {
+export default function tack (target, scope, placement) {
   target.classList.add('is-tacked')
   position(target, scope, placement)
 

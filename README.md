@@ -8,7 +8,7 @@ npm i tackjs --save
 
 ## Usage
 ```javascript
-import { tack } from 'tackjs'
+import tack from 'tackjs'
 
 const scope = document.getElementById('scope')
 const target = document.getElementById('target')
@@ -36,20 +36,5 @@ Tack supports the following coordinates relative to the passed `scope` element:
 - `bottomLeft`
 - `bottomRight`
 
-## Browser Support
-TODO, but should work in all evergreen browsers and IE 10+.
-
-## Example
-To run the example, clone this repo, then:
-```bash
-# move into example dir
-cd tackjs/example
-# install deps
-npm i
-# compile JS
-npm run js:build # or js:watch
-# serve index.html and update with changes
-live-server 
-```
-
-MIT License
+## License
+MIT License © [Eric Bailey](https://estrattonbailey.com)
