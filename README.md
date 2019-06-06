@@ -1,8 +1,6 @@
 # tackjs
 Hyper-minimal toolkit to pin an element relative to another element. [Demo here](https://estrattonbailey.github.io/tackjs/). **518b gzipped.**
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
-
 ## Install
 ```bash
 npm i tackjs --save
