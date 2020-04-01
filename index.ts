@@ -29,11 +29,11 @@ export function getCoords(element: HTMLElement) {
       x: l + (r - l) / 2
     },
     left: {
-      y: t + (b - t) / 2,
+      y: y + t + (b - t) / 2,
       x: l
     },
     right: {
-      y: t + (b - t) / 2,
+      y: y + t + (b - t) / 2,
       x: r
     },
     topLeft: {
